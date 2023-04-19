@@ -1,3 +1,5 @@
+/* eslint-disable object-curly-newline */
+/* eslint-disable react/jsx-one-expression-per-line */
 import classNames from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
@@ -8,15 +10,7 @@ import {
 } from '../../../../../redux/slices/favouriteSlice'
 import styles from './barsItem.module.css'
 
-export function BarsItem({
-  id,
-  name,
-  pictureMain,
-  description,
-  rating,
-  address,
-  city,
-}) {
+export function BarsItem({ id, name, pictureMain, description, rating, address, city }) {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -60,12 +54,7 @@ export function BarsItem({
           <p>{description}</p>
           <div>
             <p>
-              Address:
-              {' '}
-              {city}
-              ,
-              {' '}
-              {address}
+              Address: {city}, {address}
             </p>
             <div className={styles.iconsWr}>
               <div className={styles.rating}>
